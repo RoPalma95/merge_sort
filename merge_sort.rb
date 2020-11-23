@@ -12,9 +12,7 @@ def merge_sort(arr)
     sorted_rh = merge_sort(rh)
 
     until sorted_lh.empty?
-      index = 0
-      merged << (sorted_rh.empty? || sorted_lh[index] < sorted_rh[index] ? sorted_lh.shift : sorted_rh.shift)
-      index += 1
+      merged << (sorted_rh.empty? || sorted_lh.first < sorted_rh.first ? sorted_lh.shift : sorted_rh.shift)
     end
     merged << sorted_rh unless sorted_rh.empty?
   end
