@@ -8,8 +8,7 @@ def merge_sort(arr)
     rh = arr.slice(arr.length/2, arr.length)
     sorted_lh = merge_sort(lh)
     sorted_rh = merge_sort(rh)
-    
-
+  
     until sorted_lh.empty?
       index = 0
       if sorted_rh.empty? || sorted_lh[index] < sorted_rh[index]
